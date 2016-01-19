@@ -1,0 +1,27 @@
+<h1>yo stuff goes here </h1>
+<h3>...and boom goes the dynamite</h3>
+
+
+<%=link_to("-view all users",users_new_path)%>
+<br>
+<%=link_to("-view all hashtags",hashtags_new_path)%> 
+
+<br>
+<%=link_to("-create new user",users_new_path)%> 
+
+<p>Show all tweets here</p>
+
+<br/>
+
+<%= form_tag "/", method: "GET" do %>
+  <%= text_field_tag :q, params[:q] %>
+  <%= submit_tag "Search yo" %>
+<% end %>		
+
+<br>
+
+<hr>
+
+<%= render "list_of_tweets" %>
+
+

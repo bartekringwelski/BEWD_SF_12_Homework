@@ -1,0 +1,7 @@
+<% @tweets.each do |tweet| %>
+  <section>
+    <p>
+         <%= link_to(tweet.text, tweet_path(tweet.id)) %>
+  </p>
+  </section>
+<% end %>

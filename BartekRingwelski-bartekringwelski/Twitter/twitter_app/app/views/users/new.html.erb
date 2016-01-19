@@ -1,0 +1,12 @@
+<h1>Create a New User</h1>
+<%= render 'form' %>
+
+<% @users.each do |user| %>
+  <section>
+    <h3><%= link_to(user.name, user_path(user.id)) %></h3>
+    <p>
+      <%= user.name %>
+    </p>
+
+  </section>
+<% end %>

@@ -1,0 +1,14 @@
+
+<%= form_for User.new do |f| %>
+  <fieldset>
+    <div class='fields'>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class='fields'>
+      <%= f.label :premium_member %>
+      <%= f.text_field :premium_member %>
+    </div>
+  </fieldset>
+  <%= f.submit %>
+<% end %> 
