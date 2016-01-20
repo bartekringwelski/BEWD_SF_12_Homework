@@ -1,0 +1,11 @@
+<h1>Hey this is the index for users </h1>
+
+<% @users.each do |user| %>
+  <section>
+    <h3><%= link_to(user.name, user_path(user.id)) %></h3>
+    <p>
+      <%= user.name %>
+    </p>
+
+  </section>
+<% end %>

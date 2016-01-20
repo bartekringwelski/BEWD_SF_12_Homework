@@ -1,9 +1,15 @@
 class UsersController < ApplicationController
 
   #before_action :load_shirt, only: [:edit, :show, :update]
+  #validates :name, presence: true
+
+ def index
+  @users = User.all()
+ end
+
 
   def new
-   @users = User.all()
+   @user = User.new()
 
   end
 
@@ -22,4 +28,7 @@ class UsersController < ApplicationController
   def show
 
   end
+
+
+  
 end

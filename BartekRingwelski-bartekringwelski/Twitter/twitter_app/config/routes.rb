@@ -1,36 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'hashtags/new'
-
-  get 'hashtags/edit'
-
-  get 'hashtags/show'
-
-  get 'tweets/new'
-
-  get 'tweets/edit'
-
-  get 'tweets/show'
-
-  get 'tweets/index'
-
-  get 'tweets/destroy'
-
-  get 'users/new'
-
-  get 'users/edit'
-
-  get 'users/show'
-
-
-  root 'tweets#index'
-
-
-resource :user
-resource :tweet
+root 'tweets#index'
 
 resources :users
 resources :tweets
+resources :hashtags
 
   
   # The priority is based upon order of creation: first created -> highest priority.

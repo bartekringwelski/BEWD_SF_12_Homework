@@ -1,0 +1,19 @@
+<% if @tweet.errors.any? %>
+  <h2>There were errors saving your tweet</h2>
+  <ul>
+    <% @tweet.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<%= form_for @tweet do |f| %>
+  <fieldset>
+    <div class='fields'>
+      <%= f.label :text %>
+      <%= f.text_field :text %>
+    </div>
+  </fieldset>
+  <%= f.submit %>
+<% end %> 
